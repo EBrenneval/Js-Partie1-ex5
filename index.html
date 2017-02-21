@@ -12,14 +12,14 @@
         </form>
 
 <script>
-var nb = document.getElementById("premier_nombre");
+var nb = document.getElementById("premier_nombre");//declaration de la fction
 var nb2 = document.getElementById("deuxieme_nombre");
 var button = document.getElementById("valider");
-button.addEventListener("click",function(){
- if (!parseInt(nb.value) || !parseInt(nb2.value)){
+button.addEventListener("click",function(){ //declaration de la fction pour mon bouton
+ if (!parseInt(nb.value) || !parseInt(nb2.value))  // si le client écrit autre qu'un nbre
    alert ("error");
  }
-   else {
+   else {  // si le client écrit un nbre la fction est vérifiée et affiche le résultat
      var result = parseInt(nb.value)*nb2.value;
      alert(result);
    }
