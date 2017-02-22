@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Exercice_5</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <form>
-            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
-            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
-            <button  id="valider" name ="valider">Valider</button>
-        </form>
+<head>
+  <title>Exercice_5</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <form>
+    <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+    <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+    <button  id="valider" name ="valider">Valider</button>
+  </form>
 
-<script>
-var nb = document.getElementById("premier_nombre");//declaration de la fction
-var nb2 = document.getElementById("deuxieme_nombre");
-var button = document.getElementById("valider");
-button.addEventListener("click",function(){ //declaration de la fction pour mon bouton
- if (!parseInt(nb.value) || !parseInt(nb2.value))  // si le client écrit autre qu'un nbre
-   alert ("error");
- }
-   else {  // si le client écrit un nbre la fction est vérifiée et affiche le résultat
-     var result = parseInt(nb.value)*nb2.value;
-     alert(result);
-   }
+  <script>
+  var nb = document.getElementById("premier_nombre");//declaration de la fction
+  var nb2 = document.getElementById("deuxieme_nombre");
+  var button = document.getElementById("valider");
+  button.addEventListener("click",function(){ //declaration de la fction pour mon bouton
+    if (!parseInt(nb.value) || !parseInt(nb2.value))  // si le client écrit autre qu'un nbre, !parseInt veut dire si la condition est fauss. 
+    alert ("error");
+  }
+  else {  // si le client écrit un nbre la fction est vérifiée et affiche le résultat
+    var result = parseInt(nb.value)*nb2.value;// parseInt dit que l'ont veut un nbre entier
+    alert(result);
+  }
 });
 </script>
-    </body>
+</body>
 </html>
